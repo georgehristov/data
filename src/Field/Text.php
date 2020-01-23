@@ -67,7 +67,7 @@ class Text extends Field
      *
      * @return array
      */
-    public function getSeed(array $properties = []) : array
+    public function getSeed(array $properties = []): array
     {
         $seed = parent::getSeed($properties);
 

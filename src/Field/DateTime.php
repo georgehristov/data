@@ -96,7 +96,7 @@ class DateTime extends Field
      *
      * @return array
      */
-    public function getSeed(array $properties = []) : array
+    public function getSeed(array $properties = []): array
     {
         $seed = parent::getSeed($properties);
 
@@ -123,7 +123,7 @@ class DateTime extends Field
      *
      * @return string
      */
-    public function toString($value = null) : ?string
+    public function toString($value = null): ?string
     {
         $v = ($value === null ? $this->get() : $this->normalize($value));
 

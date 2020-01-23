@@ -294,7 +294,7 @@ class Field implements Expressionable
      *
      * @return array
      */
-    public function getSeed(array $properties = []) : array
+    public function getSeed(array $properties = []): array
     {
         $seed = [];
 
@@ -375,7 +375,7 @@ class Field implements Expressionable
      *
      * @return bool
      */
-    public function compare($value) : bool
+    public function compare($value): bool
     {
         return $this->owner[$this->short_name] == $value;
     }
@@ -399,17 +399,17 @@ class Field implements Expressionable
      *
      * @return bool
      */
-    public function isSystem() : bool
+    public function isSystem(): bool
     {
         return $this->system;
     }
-    
+
     /**
      * Returns if field should be editable in UI.
      *
      * @return bool
      */
-    public function isEditable() : bool
+    public function isEditable(): bool
     {
         return $this->ui['editable'] ?? (($this->read_only || $this->never_persist) ? false : !$this->system);
     }
@@ -419,7 +419,7 @@ class Field implements Expressionable
      *
      * @return bool
      */
-    public function isVisible() : bool
+    public function isVisible(): bool
     {
         return $this->ui['visible'] ?? !$this->system;
     }
@@ -429,7 +429,7 @@ class Field implements Expressionable
      *
      * @return bool
      */
-    public function isHidden() : bool
+    public function isHidden(): bool
     {
         return $this->ui['hidden'] ?? false;
     }
@@ -439,7 +439,7 @@ class Field implements Expressionable
      *
      * @return bool
      */
-    public function canBeNull() : bool
+    public function canBeNull(): bool
     {
         return $this->mandatory === false;
     }
@@ -449,7 +449,7 @@ class Field implements Expressionable
      *
      * @return bool
      */
-    public function canBeEmpty() : bool
+    public function canBeEmpty(): bool
     {
         return $this->mandatory === false && $this->required === false;
     }
@@ -459,7 +459,7 @@ class Field implements Expressionable
      *
      * @return string
      */
-    public function getCaption() : string
+    public function getCaption(): string
     {
         return $this->caption ?? $this->ui['caption'] ?? $this->readableCaption($this->short_name);
     }
@@ -495,7 +495,7 @@ class Field implements Expressionable
      *
      * @return array
      */
-    public function __debugInfo() : array
+    public function __debugInfo(): array
     {
         $arr = [
             'short_name' => $this->short_name,

@@ -103,7 +103,7 @@ class Boolean extends \atk4\data\Field
      *
      * @return array
      */
-    public function getSeed(array $properties = []) : array
+    public function getSeed(array $properties = []): array
     {
         $seed = parent::getSeed($properties);
 
@@ -130,7 +130,7 @@ class Boolean extends \atk4\data\Field
      *
      * @return string
      */
-    public function toString($value = null) : ?string
+    public function toString($value = null): ?string
     {
         $v = ($value === null ? $this->get() : $this->normalize($value));
 
