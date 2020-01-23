@@ -47,7 +47,7 @@ class Numeric extends Field
      *
      * @return array
      */
-    public function getSeed(array $properties = []) : array
+    public function getSeed(array $properties = []): array
     {
         $seed = parent::getSeed($properties);
 
@@ -128,7 +128,7 @@ class Numeric extends Field
      *
      * @return float
      */
-    protected function roundUp(float $n, int $p) : float
+    protected function roundUp(float $n, int $p): float
     {
         return $p ? ceil($n / $p) * $p : ceil($n);
     }
@@ -141,7 +141,7 @@ class Numeric extends Field
      *
      * @return float
      */
-    protected function roundDown(float $n, int $p) : float
+    protected function roundDown(float $n, int $p): float
     {
         return $p ? floor($n / $p) * $p : floor($n);
     }

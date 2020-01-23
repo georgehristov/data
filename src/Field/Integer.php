@@ -48,7 +48,7 @@ class Integer extends Numeric
      *
      * @return array
      */
-    public function getSeed(array $properties = []) : array
+    public function getSeed(array $properties = []): array
     {
         $seed = parent::getSeed($properties);
 

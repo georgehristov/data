@@ -93,7 +93,7 @@ class Email extends Field
      *
      * @return array
      */
-    public function getSeed(array $properties = []) : array
+    public function getSeed(array $properties = []): array
     {
         $seed = parent::getSeed($properties);
 
@@ -121,7 +121,7 @@ class Email extends Field
      *
      * @return string
      */
-    protected function idn_to_ascii(?string $domain) : ?string
+    protected function idn_to_ascii(?string $domain): ?string
     {
         return idn_to_ascii($domain, IDNA_NONTRANSITIONAL_TO_ASCII, INTL_IDNA_VARIANT_UTS46);
     }
